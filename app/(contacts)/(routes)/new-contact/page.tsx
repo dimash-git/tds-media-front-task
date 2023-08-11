@@ -29,6 +29,8 @@ import axios from "axios";
 import { useToast } from "@/components/ui/use-toast";
 import Link from "next/link";
 
+import useContactsStore from "@/store/contactsStore";
+
 const NewContact = () => {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -52,6 +54,7 @@ const NewContact = () => {
           description: "New Contact was successfully created!",
           variant: "success",
         });
+        // useContactsStore.persist.rehydrate();
       }
     } catch (error) {
       console.log("Submit Error", error);

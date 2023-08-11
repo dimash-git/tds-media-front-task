@@ -40,7 +40,6 @@ const useContactsStore = create<ContactsState>()(
     {
       name: "contacts-storage", // name of the item in the storage
       storage: createJSONStorage(() => localStorage), // (optional) by default, 'localStorage' is used
-      skipHydration: true,
     }
   )
 );

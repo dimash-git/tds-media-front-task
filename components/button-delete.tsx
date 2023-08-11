@@ -16,7 +16,6 @@ const ButtonDelete = function ButtonDelete({ $id }: { $id: string }) {
         description: "Something went wrong while deleting. Please try again",
         variant: "destructive",
       });
-      useContactsStore.persist.rehydrate();
     }
     toast({
       title: "Success",
