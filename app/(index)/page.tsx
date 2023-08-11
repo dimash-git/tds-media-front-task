@@ -19,6 +19,7 @@ const Index = () => {
   ]);
   useEffect(() => {
     getContacts();
+    useContactsStore.persist.rehydrate();
   }, [getContacts]);
   return (
     <div className="mt-8">
