@@ -13,4 +13,4 @@ UI:
 - React Table
 - React Hook Form, Zod
 
-Ссылка: (tds-media)[http://tds-media-front-task.vercel.app]
+Ссылка: (tds-media)[https://majestic-semolina-5bb285.netlify.app]
