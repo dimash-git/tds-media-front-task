@@ -29,8 +29,6 @@ import axios from "axios";
 import { useToast } from "@/components/ui/use-toast";
 import Link from "next/link";
 
-import useContactsStore from "@/store/contactsStore";
-
 const NewContact = () => {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -42,6 +40,7 @@ const NewContact = () => {
       phone: "",
     },
   });
+  const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
@@ -177,7 +176,7 @@ const NewContact = () => {
                 </FormItem>
               )}
             />
-            <Button className="mt-4" variant="default">
+            <Button className="mt-4" variant="default" disabled={isLoading}>
               Submit
             </Button>
             <FormDescription className="mt-4">
